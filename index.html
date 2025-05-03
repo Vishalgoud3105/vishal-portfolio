@@ -3,95 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Futuristic AI Portfolio</title>
-
-  <!-- GSAP for animations -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-  <!-- Three.js for 3D rendering -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
-
-  <!-- Anime.js for additional animations -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-
-  <!-- Custom CSS -->
+  <title>Vishal's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="projection-container">
-      <!-- 3D Projection Pad -->
-      <div class="projection-pad">
-        <!-- Profile Picture -->
-        <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic" id="profilePic" />
-      </div>
-      <!-- Tagline -->
-      <h1 class="tagline">Aspiring AIML Engineer</h1>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Vishal</h1>
+      <p>Machine Learning Engineer | Software Developer | AI Enthusiast</p>
     </div>
-  </section>
+  </header>
 
   <!-- Navigation -->
-  <nav id="mainNav">
+  <nav>
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#resume">Resume</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <!-- About Section -->
   <section id="about">
-    <h2>About Me</h2>
-    <p>Insert your background information here.</p>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Showcase your projects here.</p>
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am a final-year B.Tech student in Artificial Intelligence & Machine Learning at JBIET, Hyderabad. With a strong foundation in Machine Learning, Deep Learning, and Python development, I’ve built multiple AI-based projects, including object detection and fitness tracking using OpenCV. I'm passionate about turning innovative ideas into real-world solutions.</p>
+    </div>
   </section>
 
   <!-- Experience Section -->
   <section id="experience">
-    <h2>Experience</h2>
-    <p>Detail your professional experience here.</p>
+    <div class="container">
+      <h2>Experience</h2>
+      <ul>
+        <li>
+          <strong>Machine Learning Developer Intern</strong> – Tenali's Sports Tech Pvt. Ltd.
+          <br>Worked on developing real-time analytics for sports data using ML models.
+        </li>
+        <li>
+          <strong>Machine Learning Intern</strong> – Teachnook Pvt. Ltd.
+          <br>Implemented supervised models for small business insights.
+        </li>
+        <li>
+          <strong>AI Intern</strong> – Verzeo-SmartKnower Pvt. Ltd.
+          <br>Built image classifiers and learned scalable AI deployment.
+        </li>
+      </ul>
+    </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <p>List your skills here.</p>
+  <!-- Education Section -->
+  <section id="education">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2021 - 2025</div>
+          <div class="timeline-content">
+            <h3>B.Tech in Artificial Intelligence and Machine Learning</h3>
+            <p>CGPA: 7.50</p>
+            <p>J.B. Institute of Engineering & Technology, Hyderabad</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2019 - 2021</div>
+          <div class="timeline-content">
+            <h3>Intermediate XII in MPC</h3>
+            <p>CGPA: 8.68</p>
+            <p>Gayatri Junior College, Hyderabad</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2019</div>
+          <div class="timeline-content">
+            <h3>Secondary Education</h3>
+            <p>CGPA: 9.0</p>
+            <p>Sri Gayatri e-techno School, Hyderabad</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Resume Section -->
-  <section id="resume">
-    <h2>Resume</h2>
-    <iframe src="assets/resume.pdf" width="100%" height="600px"></iframe>
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>LeYOLO: New Scalable and Efficient CNN Architecture for Object Detection</strong>
+          <br>Custom CNN for object detection on image datasets.
+        </li>
+        <li>
+          <strong>Fitness Assessment Vision with AIML</strong>
+          <br>Tracks bicep curls, squats, and planks using OpenCV and pose detection.
+        </li>
+        <li>
+          <strong>Satellite Imagery Prediction & Analysis</strong>
+          <br>Implemented U-Net for image segmentation of satellite data.
+        </li>
+        <li>
+          <strong>Handwritten Digits Recognition</strong>
+          <br>Digit classifier using CNN on the MNIST dataset.
+        </li>
+        <li>
+          <strong>Image Classification using CIFAR-10</strong>
+          <br>Classified images with CNN achieving high accuracy.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications">
+    <div class="container">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Machine Learning Developer – Tenali's Sports Tech Pvt. Ltd.</li>
+        <li>Machine Learning with Python – Teachnook Pvt. Ltd.</li>
+        <li>Artificial Intelligence with Python – Verzeo (SmartKnower) Pvt. Ltd.</li>
+        <li>Python Programming Language – Udemy</li>
+        <li>Introduction to Machine Learning – NPTEL (IIT Kharagpur)</li>
+        <li>Machine Learning and Deep Learning – NPTEL</li>
+      </ul>
+    </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
-    <h2>Contact</h2>
-    <form id="contactForm">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Email: vishal@example.com</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/vishalgoud3105/">linkedin.com/in/vishal</a></p>
+      <p>GitHub: <a href="https://github.com/Vishalgoud3105">github.com/vishal</a></p>
+    </div>
   </section>
 
-  <!-- Audio Elements -->
-  <audio id="hoverSound" src="assets/sounds/hover.mp3" preload="auto"></audio>
-  <audio id="clickSound" src="assets/sounds/click.mp3" preload="auto"></audio>
-  <audio id="sectionTransitionSound" src="assets/sounds/transition.mp3" preload="auto"></audio>
-  <audio id="formSubmitSound" src="assets/sounds/submit.mp3" preload="auto"></audio>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Vishal. All rights reserved.</p>
+  </footer>
 
-  <!-- Custom JavaScript -->
-  <script src="script.js"></script>
 </body>
 </html>
