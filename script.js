@@ -1,44 +1,54 @@
-// script.js
-
-document.addEventListener("DOMContentLoaded", () => {
-  // Smooth scroll
-  document.querySelectorAll("a[href^='#']").forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute("href")).scrollIntoView({
-        behavior: "smooth"
-      });
-    });
+// Scroll animation reveal
+const reveals = document.querySelectorAll(".reveal");
+window.addEventListener("scroll", () => {
+  reveals.forEach((el) => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add("active");
+    }
   });
+});
 
-  // Eye icon click - open GitHub repo
-  document.querySelectorAll(".eye-icon").forEach(icon => {
-    icon.addEventListener("click", () => {
-      const repoUrl = icon.dataset.repo;
-      window.open(repoUrl, "_blank");
-    });
+// Star background canvas animation
+const canvas = document.getElementById('bgCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let stars = [];
+for (let i = 0; i < 200; i++) {
+  stars.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 1.5,
+    d: Math.random() * 1
   });
+}
 
-  // Dark mode toggle (if you want a button for it)
-  const toggleBtn = document.getElementById("dark-toggle");
-  if (toggleBtn) {
-    toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("light-mode");
-    });
-  }
+function drawStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = '#bb00ff';
+  stars.forEach(star => {
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+    ctx.fill();
+  });
+  moveStars();
+}
 
-  // Reveal on scroll
-  const revealElements = document.querySelectorAll(".reveal");
-  const revealOnScroll = () => {
-    const triggerBottom = window.innerHeight * 0.8;
-    revealElements.forEach(el => {
-      const elTop = el.getBoundingClientRect().top;
-      if (elTop < triggerBottom) {
-        el.classList.add("active");
-      }
-    });
-  };
+function moveStars() {
+  stars.forEach(star => {
+    star.y += star.d;
+    if (star.y > canvas.height) {
+      star.y = 0;
+      star.x = Math.random() * canvas.width;
+    }
+  });
+}
 
-  window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll(); // initial
+setInterval(drawStars, 50);
+
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 });
