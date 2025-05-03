@@ -2,79 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vishal's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <canvas id="bgCanvas"></canvas>
-
   <header>
     <nav>
       <h1>Vishal</h1>
       <ul>
-        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
         <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="hero" class="reveal">
-    <div>
-      <h2>Hello, I'm <span class="neon">Vishal</span></h2>
-      <p>AI/ML Engineer • Final Year B.Tech Student</p>
-      <button onclick="window.location.href='#projects'">See My Work</button>
+  <section id="hero">
+    <div class="content reveal">
+      <h2>Hi, I'm Vishal</h2>
+      <p>A Machine Learning Engineer & Software Developer</p>
+      <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Let's Connect</button>
     </div>
   </section>
 
+  <section id="about" class="reveal">
+    <h2>About Me</h2>
+    <p>I’m a final-year B.Tech student specializing in AI & ML, experienced in Deep Learning, OpenCV, and full-stack AI-powered solutions.</p>
+  </section>
+
   <section id="projects" class="reveal">
-    <h2 class="neon">Projects</h2>
+    <h2>Projects</h2>
     <div class="project-grid">
       <div class="project-card">
-        <img src="project1.jpg" alt="Project 1">
+        <img src="images/project1.png" alt="Project 1" />
         <div class="overlay">
-          <a href="https://github.com/vishal/project1" target="_blank" class="eye-icon"><i class="fas fa-eye"></i></a>
+          <i class="eye-icon" data-repo="https://github.com/yourusername/project1">👁️</i>
         </div>
+        <p>LeYOLO Object Detection</p>
+      </div>
+      <div class="project-card">
+        <img src="images/project2.png" alt="Project 2" />
+        <div class="overlay">
+          <i class="eye-icon" data-repo="https://github.com/yourusername/project2">👁️</i>
+        </div>
+        <p>Fitness Vision AI</p>
       </div>
       <!-- Add more projects similarly -->
     </div>
   </section>
 
-  <section id="experience" class="reveal">
-    <h2 class="neon">Work Experience</h2>
-    <div class="resume-card">
-      <h3>Machine Learning Developer – Tenali's Sports Tech</h3>
-      <p>Developed predictive models for sports analytics using Python & ML frameworks.</p>
-      <br/>
-      <h3>ML Intern – Teachnook</h3>
-      <p>Built and trained CNN models for image recognition tasks.</p>
-      <!-- Add more experiences -->
-    </div>
-  </section>
-
   <section id="resume" class="reveal">
-    <h2 class="neon">My Resume</h2>
+    <h2>My Resume</h2>
     <div class="resume-card">
-      <iframe src="Vishal_Final_Resume.pdf" width="100%" height="500px"></iframe>
+      <embed src="Vishal_Final_Resume.pdf" type="application/pdf" width="100%" height="500px" />
     </div>
   </section>
 
   <section id="contact" class="reveal">
-    <h2 class="neon">Connect With Me</h2>
-    <div class="social-icons">
-      <a href="https://github.com/Vishalgoud3105" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/vishalgoud3105/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
+    <h2>Contact Me</h2>
+    <p>Email: vishal@example.com</p>
+    <p>GitHub: <a href="https://github.com/Vishalgoud3105" target="_blank"></a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/vishalgoud3105/" target="_blank">vishal-profile</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Vishal. All rights reserved.</p>
+    <p>© 2025 Vishal. All rights reserved.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
