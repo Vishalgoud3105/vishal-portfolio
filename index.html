@@ -5,146 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vishal's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <canvas id="bgCanvas"></canvas>
 
-  <!-- Header -->
   <header>
-    <div class="container">
+    <nav>
       <h1>Vishal</h1>
-      <p>Machine Learning Engineer | Software Developer | AI Enthusiast</p>
-    </div>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I am a final-year B.Tech student in Artificial Intelligence & Machine Learning at JBIET, Hyderabad. With a strong foundation in Machine Learning, Deep Learning, and Python development, I’ve built multiple AI-based projects, including object detection and fitness tracking using OpenCV. I'm passionate about turning innovative ideas into real-world solutions.</p>
+  <section id="hero" class="reveal">
+    <div>
+      <h2>Hello, I'm <span class="neon">Vishal</span></h2>
+      <p>AI/ML Engineer • Final Year B.Tech Student</p>
+      <button onclick="window.location.href='#projects'">See My Work</button>
     </div>
   </section>
 
-  <!-- Education Section -->
-  <section id="education">
-    <div class="container">
-      <h2>Education</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">2021 - 2025</div>
-          <div class="timeline-content">
-            <h3>B.Tech in Artificial Intelligence and Machine Learning</h3>
-            <p>CGPA: 7.50</p>
-            <p>J.B. Institute of Engineering & Technology, Hyderabad</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">2019 - 2021</div>
-          <div class="timeline-content">
-            <h3>Intermediate XII in MPC</h3>
-            <p>CGPA: 8.68</p>
-            <p>Gayatri Junior College, Hyderabad</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">2019</div>
-          <div class="timeline-content">
-            <h3>Secondary Education</h3>
-            <p>CGPA: 9.0</p>
-            <p>Sri Gayatri e-techno School, Hyderabad</p>
-          </div>
+  <section id="projects" class="reveal">
+    <h2 class="neon">Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="project1.jpg" alt="Project 1">
+        <div class="overlay">
+          <a href="https://github.com/vishal/project1" target="_blank" class="eye-icon"><i class="fas fa-eye"></i></a>
         </div>
       </div>
+      <!-- Add more projects similarly -->
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <strong>Voice-Vision-Hand Controller Mouse | April 2025 – April 2025</strong><br>
-          Developed a smart desktop controller using eye tracking, voice commands, and hand gestures to replicate all mouse functions—like left/right clicks, double-clicks, and full desktop navigation—via gaze control, voice-based app launching, and index finger cursor movement.<br>
-          Trained using LSTM model architecture on eye movement data to improve accuracy and smooth interaction.<br>
-          Achieved over 80% precision in real-time operation across varied environments.<br>
-          <em>Skills Utilized:</em> Python, LSTM, OpenCV, MediaPipe, Dlib, Speech Recognition, Eye-Tracking, Hand Tracking, Voice Automation, Facial Landmark Detection, Human-Computer Interaction, Deep Learning.
-        </li>
-        <li>
-          <strong>LeYOLO: Scalable and Efficient CNN for Object Detection | Mar 2025 – Mar 2025</strong><br>
-          Designed and deployed a hybrid object detection model (YOLO, RetinaNet, EfficientDet) achieving 92.3% accuracy and 85% F1-score on COCO dataset.<br>
-          Reduced FLOPs by 42%, enabling deployment on low-power edge devices with up to 64 FPS inference speed.<br>
-          <em>Skills Utilized:</em> Python, OpenCV, CNN, Feature Pyramid Network, Hybrid Activations, Deep Learning.
-        </li>
-      </ul>
+  <section id="experience" class="reveal">
+    <h2 class="neon">Work Experience</h2>
+    <div class="resume-card">
+      <h3>Machine Learning Developer – Tenali's Sports Tech</h3>
+      <p>Developed predictive models for sports analytics using Python & ML frameworks.</p>
+      <br/>
+      <h3>ML Intern – Teachnook</h3>
+      <p>Built and trained CNN models for image recognition tasks.</p>
+      <!-- Add more experiences -->
     </div>
   </section>
 
-  <!-- Experience Section -->
-  <section id="experience">
-    <div class="container">
-      <h2>Experience</h2>
-      <ul>
-        <li>
-          <strong>Machine Learning Developer Intern</strong> – Tenali’s Sports Tech Pvt. Ltd. (May 2023 – July 2023)<br>
-          Developed AI-driven sports analytics tools using real-time pose estimation and motion analysis.<br>
-          Contributed to performance dashboards that assisted coaches in monitoring athlete progress.<br>
-          <em>Technologies:</em> Python, OpenCV, Pose Estimation, Computer Vision, Flask.
-        </li>
-        <li>
-          <strong>Machine Learning Intern</strong> – Teachnook Pvt. Ltd. (Feb 2023 – April 2023)<br>
-          Created ML models for small business data insights and predictive analytics.<br>
-          Explored regression and classification approaches on customer behavior data.
-        </li>
-        <li>
-          <strong>AI Intern</strong> – Verzeo-SmartKnower Pvt. Ltd. (Oct 2022 – Dec 2022)<br>
-          Built and deployed image classification models and gained hands-on deployment experience using cloud tools.
-        </li>
-      </ul>
+  <section id="resume" class="reveal">
+    <h2 class="neon">My Resume</h2>
+    <div class="resume-card">
+      <iframe src="Vishal_Final_Resume.pdf" width="100%" height="500px"></iframe>
     </div>
   </section>
 
-  <!-- Certifications Section -->
-  <section id="certifications">
-    <div class="container">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Machine Learning Developer – Tenali's Sports Tech Pvt. Ltd.</li>
-        <li>Machine Learning with Python – Teachnook Pvt. Ltd.</li>
-        <li>Artificial Intelligence with Python – Verzeo (SmartKnower) Pvt. Ltd.</li>
-        <li>Python Programming Language – Udemy</li>
-        <li>Introduction to Machine Learning – NPTEL (IIT Kharagpur)</li>
-        <li>Machine Learning and Deep Learning – NPTEL</li>
-      </ul>
+  <section id="contact" class="reveal">
+    <h2 class="neon">Connect With Me</h2>
+    <div class="social-icons">
+      <a href="https://github.com/vishal" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/vishal" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Email: vishal@example.com</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/vishalgoud3105/">linkedin.com/in/vishal</a></p>
-      <p>GitHub: <a href="https://github.com/Vishalgoud3105">github.com/vishal</a></p>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Vishal. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
