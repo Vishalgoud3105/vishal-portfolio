@@ -32,6 +32,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 nav h1 {
   color: #bb00ff;
@@ -41,6 +42,7 @@ nav ul {
   display: flex;
   gap: 20px;
   list-style: none;
+  flex-wrap: wrap;
 }
 nav ul li a {
   color: #aaa;
@@ -70,9 +72,13 @@ h2.neon {
   justify-content: center;
   background: linear-gradient(135deg, #1a001a, #0d0d0d);
   text-align: center;
+  padding: 60px 20px;
 }
 #hero h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
+}
+#hero p {
+  font-size: 1.2rem;
 }
 #hero button {
   margin-top: 20px;
@@ -153,6 +159,7 @@ h2.neon {
   display: flex;
   gap: 20px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .social-icons a {
   font-size: 30px;
@@ -169,4 +176,53 @@ footer {
   text-align: center;
   padding: 20px;
   color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #hero h2 {
+    font-size: 2rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  .resume-card iframe {
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero h2 {
+    font-size: 1.5rem;
+  }
+
+  #hero button {
+    width: 100%;
+  }
+
+  h2.neon {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 100px 20px 60px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
